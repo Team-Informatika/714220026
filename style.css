@@ -14,8 +14,9 @@ body {
     height: 100vh;
     color: #333;
     flex-direction: column;
+    padding: 10px; /* Menambahkan padding untuk mencegah konten bersentuhan dengan tepi layar pada perangkat kecil */
 }
-  
+
 .container {
     display: flex;
     justify-content: center;
@@ -30,8 +31,8 @@ body {
     padding: 30px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 350px;
-    max-width: 100%; /* Membatasi lebar card agar tidak terlalu lebar */
+    width: 100%;
+    max-width: 350px; /* Maksimal lebar 350px */
     transition: transform 0.3s ease;
 }
   
@@ -87,11 +88,11 @@ body {
 }
 
 .rate strong {
-    color: #3498db; /* Menambahkan warna biru pada "Hourly Rate" */
+    color: #3498db;
 }
 
 .rate br {
-    margin-bottom: 5px; /* Memberikan jarak antara baris */
+    margin-bottom: 5px;
 }
 
 .description {
@@ -119,6 +120,7 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Membuat ikon bisa membungkus ke baris berikutnya jika terlalu sempit */
 }
 
 .social-icon {
@@ -145,7 +147,7 @@ body {
 
 /* Tooltip Style */
 .social-icon::after {
-    content: attr(title); /* Menampilkan teks dari atribut title */
+    content: attr(title);
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -171,6 +173,7 @@ body {
     .profile-card {
         width: 90%;
         padding: 20px;
+        box-sizing: border-box;
     }
   
     .name {
@@ -194,6 +197,6 @@ body {
     }
   
     .social-icon {
-        font-size: 1.2rem;
+        font-size: 1.3rem; /* Ukuran ikon sosial di perangkat kecil */
     }
 }
